@@ -16,19 +16,18 @@ class MainViewController: UIViewController, Storyboarder {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeigt: NSLayoutConstraint!
     
-    var fakeData = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
-    
     weak var coordinator: MainCoordinator?
     
+    let client_id = "SKFVFAJQOCZ4SBO4UWWTAW21JB2YE2FVH0BCZRPYFILW2HV1"
+    let client_secret = "0C5B3OPU4DFMOBA2ZTO3LPKGBIM00ZY5ZYVOAJHRGPZQOJWG"
+    let tartuBusStationloc = CLLocationCoordinate2D(latitude: 58.3780, longitude: 26.7321)
     var pinAnotation: LocationSpot?
     let locationManager = CLLocationManager()
     let regionRadius: CLLocationDistance = 5000
     
+    // ToDo local storage for fetched data - Realm or CoreData
     var searchResults = [JSON]()
-    
-    let TartuBusStationloc = CLLocationCoordinate2D(latitude: 58.3780, longitude: 26.7321)
-    
-    
+    var fakeData = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
     
     enum UIUserInterfaceIdiom : Int {
         case unspecified
@@ -42,48 +41,21 @@ class MainViewController: UIViewController, Storyboarder {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        updateCollectionViewSize()
         verifyLocationStatus()
-        
+        updateUi()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
+//        navigationController?.isNavigationBarHidden = true
     }
     
     private func updateUi() {
-        mapView.layer.masksToBounds = true
-        mapView.layer.cornerRadius = 40
         
-    }
-    
-   
-
-    func searchForVenue() {
-        let currentLocation = getCenterLocation(for: mapView)
-        let url = "https://api.foursquare.com/v2/search/recommendations?ll=\(currentLocation.latitude),\(currentLocation.longitude)&v=20182411&categoryId=4bf58dd8d48988d16c941735&limit=100&client_id=\(client_id)&client_secret=\(client_secret)"
-
-        let request = NSMutableURLRequest(url: URL(string: url)!)
-        let session = URLSession.shared
-
-        request.httpMethod = "GET"
-
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-
-        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, err -> Void in
-
-            let json = JSON(data: data!)
-            self.searchResults = json["response"]["group"]["results"].arrayValue
-
-            DispatchQueue.main.async {
-                self.addVenuesOnMap()
-                print(json)
-            }
-
-        })
-
-        task.resume()
+        updateCollectionViewSize()
+        mapView.layer.masksToBounds = true
+        mapView.layer.cornerRadius = 10
+        
     }
 
 }

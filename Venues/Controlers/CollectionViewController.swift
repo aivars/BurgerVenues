@@ -45,12 +45,12 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func updateCollectionViewSize() {
         if UIDevice.current.userInterfaceIdiom == .phone {
             let width = (view.frame.size.width - 52) / 2
-            let height = width * 6 + 50
+            let height = width * 6 + 70
             collectionViewHeigt.constant = height
         }
         if UIDevice.current.userInterfaceIdiom == .pad {
             let width = (view.frame.size.width - 52) / 4
-            let height = width * 3
+            let height = width * 3 + 40
             collectionViewHeigt.constant = height
         }
     }

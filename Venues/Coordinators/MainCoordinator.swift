@@ -23,12 +23,17 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func updateMap() {
-        let vc = MainViewController.instantiate()
-        vc.coordinator = self
-        vc.addVenuesOnMap()
-        navigationController.pushViewController(vc, animated: false)
+    func showDetails(venueName: String, photoUrl: String) {
+        let detailsVc = DetailsVievControler.instantiate()
+        detailsVc.locationName = venueName
+        detailsVc.photoUrl = photoUrl
+        navigationController.pushViewController(detailsVc, animated: true)
+        print("show details")
         
+    }
+    
+    func navigate() {
+        print("strat navigation")
     }
     
 

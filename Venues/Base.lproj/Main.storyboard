@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad10_5" orientation="landscape">
+    <device id="ipad10_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,17 +15,20 @@
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Venues" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSM-gx-tch">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coe-hk-1x9">
-                                        <rect key="frame" x="0.0" y="0.0" width="1112" height="1160"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="890"/>
                                         <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone_Bacground" translatesAutoresizingMaskIntoConstraints="NO" id="bHG-eN-jYt">
+                                                <rect key="frame" x="0.0" y="-42" width="834" height="974"/>
+                                            </imageView>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0e-e5-Y4a">
-                                                <rect key="frame" x="16" y="32" width="1080" height="680"/>
+                                                <rect key="frame" x="16" y="32" width="802" height="402"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Z0e-e5-Y4a" secondAttribute="height" multiplier="1:1" id="vFb-YZ-1CU">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="400"/>
@@ -33,7 +36,7 @@
                                                 </constraints>
                                             </mapView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bCU-JM-n1C">
-                                                <rect key="frame" x="16" y="744" width="1080" height="400"/>
+                                                <rect key="frame" x="16" y="466" width="802" height="400"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="400" id="XDO-op-uv1"/>
@@ -70,13 +73,17 @@
                                                 </cells>
                                             </collectionView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Z0e-e5-Y4a" firstAttribute="leading" secondItem="Coe-hk-1x9" secondAttribute="leading" constant="16" id="3EG-GW-rvh"/>
                                             <constraint firstItem="Z0e-e5-Y4a" firstAttribute="top" secondItem="Coe-hk-1x9" secondAttribute="top" constant="32" id="6fs-ef-26m"/>
                                             <constraint firstItem="bCU-JM-n1C" firstAttribute="top" secondItem="Z0e-e5-Y4a" secondAttribute="bottom" constant="32" id="Dxx-8y-tOQ"/>
-                                            <constraint firstAttribute="bottom" secondItem="bCU-JM-n1C" secondAttribute="bottom" constant="16" id="KJQ-vJ-a7r"/>
+                                            <constraint firstAttribute="bottom" secondItem="bHG-eN-jYt" secondAttribute="bottom" constant="-42" id="KeI-ig-hOv"/>
+                                            <constraint firstAttribute="trailing" secondItem="bHG-eN-jYt" secondAttribute="trailing" id="PLy-hS-xp3"/>
+                                            <constraint firstItem="bHG-eN-jYt" firstAttribute="leading" secondItem="Coe-hk-1x9" secondAttribute="leading" id="RL6-2s-pUR"/>
+                                            <constraint firstAttribute="bottom" secondItem="bCU-JM-n1C" secondAttribute="bottom" constant="24" id="RlI-cL-RW8"/>
                                             <constraint firstAttribute="trailing" secondItem="bCU-JM-n1C" secondAttribute="trailing" constant="16" id="lYQ-ei-E4q"/>
+                                            <constraint firstItem="bHG-eN-jYt" firstAttribute="top" secondItem="Coe-hk-1x9" secondAttribute="top" constant="-42" id="rQB-Mq-5JA"/>
                                             <constraint firstItem="bCU-JM-n1C" firstAttribute="leading" secondItem="Coe-hk-1x9" secondAttribute="leading" constant="16" id="rVs-yW-PA2"/>
                                             <constraint firstAttribute="trailing" secondItem="Z0e-e5-Y4a" secondAttribute="trailing" constant="16" id="xli-Hs-tSk"/>
                                         </constraints>
@@ -88,15 +95,17 @@
                                     <constraint firstItem="Coe-hk-1x9" firstAttribute="width" secondItem="CSM-gx-tch" secondAttribute="width" id="PVx-1v-aRU"/>
                                     <constraint firstItem="Coe-hk-1x9" firstAttribute="top" secondItem="CSM-gx-tch" secondAttribute="top" id="U6k-bM-sFb"/>
                                     <constraint firstAttribute="bottom" secondItem="Coe-hk-1x9" secondAttribute="bottom" id="fym-xN-XxY"/>
-                                    <constraint firstItem="Coe-hk-1x9" firstAttribute="height" secondItem="CSM-gx-tch" secondAttribute="height" priority="250" id="uBa-qt-41w"/>
+                                    <constraint firstItem="Coe-hk-1x9" firstAttribute="height" secondItem="CSM-gx-tch" secondAttribute="height" priority="250" id="uBa-qt-41w">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="-222"/>
+                                    </constraint>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CSM-gx-tch" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9nm-vz-Rfo"/>
-                            <constraint firstItem="CSM-gx-tch" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Cbd-YS-xpg"/>
                             <constraint firstItem="CSM-gx-tch" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hnq-7R-JFe"/>
+                            <constraint firstAttribute="bottom" secondItem="CSM-gx-tch" secondAttribute="bottom" id="PUZ-o7-q0h"/>
                             <constraint firstItem="CSM-gx-tch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WKp-4V-SRN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -109,10 +118,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="26"/>
+            <point key="canvasLocation" x="139.56834532374103" y="25.359712230215827"/>
+        </scene>
+        <!--Details Viev Controler-->
+        <scene sceneID="goS-cL-155">
+            <objects>
+                <viewController storyboardIdentifier="DetailsVievControler" id="Yn2-mA-s1j" customClass="DetailsVievControler" customModule="Venues" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l60-bz-giA">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone_Bacground" translatesAutoresizingMaskIntoConstraints="NO" id="alX-YF-Q94">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANU-xW-NUJ">
+                                <rect key="frame" x="267" y="1022" width="300" height="45"/>
+                                <color key="backgroundColor" red="0.30796074867248535" green="0.28287678956985474" blue="0.70374917984008789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Nan-T5-2m4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="rOq-7U-31A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Navigate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigate:" destination="Yn2-mA-s1j" eventType="touchUpInside" id="qRk-R7-55o"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger" translatesAutoresizingMaskIntoConstraints="NO" id="B6K-Qf-ft4">
+                                <rect key="frame" x="167" y="306" width="500" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="O3I-md-zpx">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="300" id="oVo-i8-OdH">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="laH-s9-3Ih" firstAttribute="bottom" secondItem="alX-YF-Q94" secondAttribute="bottom" id="1rW-lm-VeP"/>
+                            <constraint firstItem="alX-YF-Q94" firstAttribute="leading" secondItem="laH-s9-3Ih" secondAttribute="leading" id="7VP-FR-irg"/>
+                            <constraint firstItem="alX-YF-Q94" firstAttribute="trailing" secondItem="laH-s9-3Ih" secondAttribute="trailing" id="Aft-D5-Zta"/>
+                            <constraint firstItem="alX-YF-Q94" firstAttribute="leading" secondItem="laH-s9-3Ih" secondAttribute="leading" id="H0Y-o3-iGw"/>
+                            <constraint firstItem="laH-s9-3Ih" firstAttribute="bottom" secondItem="ANU-xW-NUJ" secondAttribute="bottom" constant="45" id="QOC-Ed-g7S"/>
+                            <constraint firstItem="alX-YF-Q94" firstAttribute="top" secondItem="l60-bz-giA" secondAttribute="top" id="RoO-ak-IAe"/>
+                            <constraint firstItem="B6K-Qf-ft4" firstAttribute="centerY" secondItem="l60-bz-giA" secondAttribute="centerY" id="TXD-fH-Xox"/>
+                            <constraint firstItem="B6K-Qf-ft4" firstAttribute="centerX" secondItem="l60-bz-giA" secondAttribute="centerX" id="VmB-sg-1tA"/>
+                            <constraint firstItem="alX-YF-Q94" firstAttribute="top" secondItem="l60-bz-giA" secondAttribute="top" id="Z4X-kD-ZM7"/>
+                            <constraint firstItem="laH-s9-3Ih" firstAttribute="trailing" secondItem="alX-YF-Q94" secondAttribute="trailing" id="dco-8B-gJV"/>
+                            <constraint firstItem="alX-YF-Q94" firstAttribute="bottom" secondItem="laH-s9-3Ih" secondAttribute="bottom" id="iav-x6-6Mz"/>
+                            <constraint firstItem="ANU-xW-NUJ" firstAttribute="centerX" secondItem="l60-bz-giA" secondAttribute="centerX" id="ofi-dx-nMF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="laH-s9-3Ih"/>
+                    </view>
+                    <connections>
+                        <outlet property="foodImageView" destination="B6K-Qf-ft4" id="bVp-ot-r7R"/>
+                        <outlet property="navigateBtn" destination="ANU-xW-NUJ" id="BVZ-Wu-CUi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJ9-jB-cLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.08633093525191" y="25.359712230215827"/>
         </scene>
     </scenes>
     <resources>
         <image name="burger" width="1125" height="843.75"/>
+        <image name="iPhone_Bacground" width="414" height="896"/>
     </resources>
 </document>

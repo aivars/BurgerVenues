@@ -13,28 +13,14 @@ import Contacts
 class LocationSpot: NSObject, MKAnnotation {
     
     let title: String?
-    let locationName: String?
     let coordinate: CLLocationCoordinate2D
+    let photoSuffix: String?
     
-    init(title: String, locationName: String, coordinate: CLLocationCoordinate2D) {
+    init(title: String, coordinate: CLLocationCoordinate2D, photoSuffix: String) {
         self.title = title
-        self.locationName = locationName
         self.coordinate = coordinate
+        self.photoSuffix = photoSuffix
+
     }
-    
-    var subtitle: String? {
-        return locationName
-    }
-    
-    func mapItem(location: CLLocationCoordinate2D) -> MKMapItem {
-        let addressDictionary = [String(CNPostalAddressStreetKey):subtitle]
-        let placemark = MKPlacemark(coordinate: location, addressDictionary: addressDictionary as [String : Any])
-        
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = title
-        
-        return mapItem
-    }
-    
 
 }

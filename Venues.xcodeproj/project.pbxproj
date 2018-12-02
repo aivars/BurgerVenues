@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600A9C7221B31033003B6281 /* DetailsVievVontroler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A9C7121B31033003B6281 /* DetailsVievVontroler.swift */; };
+		600A9C7321B31033003B6281 /* DetailsVievVontroler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A9C7121B31033003B6281 /* DetailsVievVontroler.swift */; };
+		600A9C7421B31033003B6281 /* DetailsVievVontroler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A9C7121B31033003B6281 /* DetailsVievVontroler.swift */; };
+		600A9C7921B3C3AF003B6281 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A9C7821B3C3AF003B6281 /* UIButtonExtension.swift */; };
+		600A9C7A21B3C3AF003B6281 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A9C7821B3C3AF003B6281 /* UIButtonExtension.swift */; };
+		600A9C7B21B3C3AF003B6281 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A9C7821B3C3AF003B6281 /* UIButtonExtension.swift */; };
 		601E4C4521A87C640000F74E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601E4C4421A87C640000F74E /* AppDelegate.swift */; };
 		601E4C4721A87C640000F74E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601E4C4621A87C640000F74E /* MainViewController.swift */; };
 		601E4C4A21A87C640000F74E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601E4C4821A87C640000F74E /* Main.storyboard */; };
@@ -35,9 +41,6 @@
 		60E11E0421A9C70400F0685E /* MapViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0321A9C70400F0685E /* MapViewControler.swift */; };
 		60E11E0521A9C70400F0685E /* MapViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0321A9C70400F0685E /* MapViewControler.swift */; };
 		60E11E0621A9C70400F0685E /* MapViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0321A9C70400F0685E /* MapViewControler.swift */; };
-		60E11E0A21A9C96100F0685E /* SearchControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0921A9C96100F0685E /* SearchControler.swift */; };
-		60E11E0B21A9C96100F0685E /* SearchControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0921A9C96100F0685E /* SearchControler.swift */; };
-		60E11E0C21A9C96100F0685E /* SearchControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0921A9C96100F0685E /* SearchControler.swift */; };
 		60E11E0E21A9CF3000F0685E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0D21A9CF3000F0685E /* SwiftyJSON.swift */; };
 		60E11E0F21A9CF3000F0685E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0D21A9CF3000F0685E /* SwiftyJSON.swift */; };
 		60E11E1021A9CF3000F0685E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0D21A9CF3000F0685E /* SwiftyJSON.swift */; };
@@ -65,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		593658F3F04B609B5710DCB0 /* Pods-Venues.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venues.release.xcconfig"; path = "Pods/Target Support Files/Pods-Venues/Pods-Venues.release.xcconfig"; sourceTree = "<group>"; };
+		600A9C7121B31033003B6281 /* DetailsVievVontroler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVievVontroler.swift; sourceTree = "<group>"; };
+		600A9C7821B3C3AF003B6281 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		601E4C4121A87C640000F74E /* Venues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		601E4C4421A87C640000F74E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		601E4C4621A87C640000F74E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +90,6 @@
 		60E11DF721A8F7FD00F0685E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		60E11DFF21A9C64300F0685E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		60E11E0321A9C70400F0685E /* MapViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControler.swift; sourceTree = "<group>"; };
-		60E11E0921A9C96100F0685E /* SearchControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControler.swift; sourceTree = "<group>"; };
 		60E11E0D21A9CF3000F0685E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		8AD1534150DCF6B1B1D73CD2 /* Pods_VenuesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenuesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCD133A5DF264365053FF1F /* Pods_VenuesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenuesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,8 +147,18 @@
 			children = (
 				601E4C4621A87C640000F74E /* MainViewController.swift */,
 				60E11DF721A8F7FD00F0685E /* CollectionViewCell.swift */,
+				600A9C7121B31033003B6281 /* DetailsVievVontroler.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		600A9C7C21B3C3BC003B6281 /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				60E11E0D21A9CF3000F0685E /* SwiftyJSON.swift */,
+				600A9C7821B3C3AF003B6281 /* UIButtonExtension.swift */,
+			);
+			path = Utilites;
 			sourceTree = "<group>";
 		};
 		601E4C3821A87C640000F74E = {
@@ -177,7 +191,7 @@
 				60C554E721A8868900C217BF /* Coordinators */,
 				600A9C7021B1C9A8003B6281 /* View */,
 				60E11E0721A9C8FE00F0685E /* Controlers */,
-				60E11E0D21A9CF3000F0685E /* SwiftyJSON.swift */,
+				600A9C7C21B3C3BC003B6281 /* Utilites */,
 				601E4C4821A87C640000F74E /* Main.storyboard */,
 				601E4C4B21A87C6A0000F74E /* Assets.xcassets */,
 				601E4C4D21A87C6A0000F74E /* LaunchScreen.storyboard */,
@@ -219,7 +233,6 @@
 			children = (
 				60E11DFF21A9C64300F0685E /* CollectionViewController.swift */,
 				60E11E0321A9C70400F0685E /* MapViewControler.swift */,
-				60E11E0921A9C96100F0685E /* SearchControler.swift */,
 			);
 			path = Controlers;
 			sourceTree = "<group>";
@@ -405,12 +418,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Venues/Pods-Venues-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -470,13 +485,14 @@
 			files = (
 				60E11E0421A9C70400F0685E /* MapViewControler.swift in Sources */,
 				601E4C4721A87C640000F74E /* MainViewController.swift in Sources */,
+				600A9C7921B3C3AF003B6281 /* UIButtonExtension.swift in Sources */,
 				60E11DF821A8F7FD00F0685E /* CollectionViewCell.swift in Sources */,
 				60E11E0021A9C64300F0685E /* CollectionViewController.swift in Sources */,
+				600A9C7221B31033003B6281 /* DetailsVievVontroler.swift in Sources */,
 				60C554E121A8867D00C217BF /* Storyboarder.swift in Sources */,
 				60C554E921A88C3300C217BF /* LocationSpot.swift in Sources */,
 				601E4C4521A87C640000F74E /* AppDelegate.swift in Sources */,
 				60C554E421A8867D00C217BF /* MainCoordinator.swift in Sources */,
-				60E11E0A21A9C96100F0685E /* SearchControler.swift in Sources */,
 				60E11E0E21A9CF3000F0685E /* SwiftyJSON.swift in Sources */,
 				60C554DE21A8867D00C217BF /* Coordinator.swift in Sources */,
 			);
@@ -491,11 +507,12 @@
 				60C554EA21A88C3300C217BF /* LocationSpot.swift in Sources */,
 				60E11E0F21A9CF3000F0685E /* SwiftyJSON.swift in Sources */,
 				60E11E0121A9C64300F0685E /* CollectionViewController.swift in Sources */,
+				600A9C7A21B3C3AF003B6281 /* UIButtonExtension.swift in Sources */,
 				60E11DF921A8F7FD00F0685E /* CollectionViewCell.swift in Sources */,
 				60C554E221A8867D00C217BF /* Storyboarder.swift in Sources */,
 				60E11E0521A9C70400F0685E /* MapViewControler.swift in Sources */,
 				601E4C5A21A87C6A0000F74E /* VenuesTests.swift in Sources */,
-				60E11E0B21A9C96100F0685E /* SearchControler.swift in Sources */,
+				600A9C7321B31033003B6281 /* DetailsVievVontroler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,11 +525,12 @@
 				60C554EB21A88C3300C217BF /* LocationSpot.swift in Sources */,
 				60E11E1021A9CF3000F0685E /* SwiftyJSON.swift in Sources */,
 				60E11E0221A9C64300F0685E /* CollectionViewController.swift in Sources */,
+				600A9C7B21B3C3AF003B6281 /* UIButtonExtension.swift in Sources */,
 				60E11DFA21A8F7FD00F0685E /* CollectionViewCell.swift in Sources */,
 				60C554E321A8867D00C217BF /* Storyboarder.swift in Sources */,
 				60E11E0621A9C70400F0685E /* MapViewControler.swift in Sources */,
 				601E4C6521A87C6A0000F74E /* VenuesUITests.swift in Sources */,
-				60E11E0C21A9C96100F0685E /* SearchControler.swift in Sources */,
+				600A9C7421B31033003B6281 /* DetailsVievVontroler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
