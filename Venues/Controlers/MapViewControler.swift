@@ -9,7 +9,7 @@
 import MapKit
 import CoreLocation
 
-extension MainViewController: MKMapViewDelegate {
+extension HomeViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -49,7 +49,7 @@ extension MainViewController: MKMapViewDelegate {
 
 
 
-extension MainViewController: CLLocationManagerDelegate {
+extension HomeViewController: CLLocationManagerDelegate {
 
     // verify is location services available
     func verifyLocationStatus() {
@@ -60,7 +60,7 @@ extension MainViewController: CLLocationManagerDelegate {
             StartLocationTracking()
             return
         case .denied, .restricted:
-            //localisation status denied, you may like to inform user here
+            //localisation status denied, alert user
             print ("localisation status denied buy user")
         default:
             //location services are not available, request access
@@ -70,19 +70,24 @@ extension MainViewController: CLLocationManagerDelegate {
     }
     
     func StartLocationTracking() {
-        mapView.delegate = self
+        
         mapView.showsUserLocation = true
-        locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = 100
         locationManager.startUpdatingLocation()
         
         centerViewOnUserLocation()
     }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedAlways || status == .authorizedWhenInUse{
+           centerViewOnUserLocation()
+        }
+    }
 
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate { 
-            let coordinateRegion = MKCoordinateRegion(center: location, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
+            let coordinateRegion = MKCoordinateRegion(center: location, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
             mapView.setRegion(coordinateRegion, animated: true)
 
             searchForVenue()
@@ -100,8 +105,11 @@ extension MainViewController: CLLocationManagerDelegate {
     
     func searchForVenue() {
         
+        releadBtn.isHidden = true
+        self.gateringLbl.isHidden = false
+        
         let currentLocation = getCenterLocation(for: mapView)
-        let url = "https://api.foursquare.com/v2/search/recommendations?ll=\(currentLocation.latitude),\(currentLocation.longitude)&v=20182411&categoryId=4bf58dd8d48988d16c941735&limit=100&client_id=\(client_id)&client_secret=\(client_secret)"
+        let url = "https://api.foursquare.com/v2/search/recommendations?ll=\(currentLocation.latitude),\(currentLocation.longitude)&v=20182411&categoryId=4bf58dd8d48988d16c941735&limit=150&client_id=\(client_id)&client_secret=\(client_secret)"
         
         let request = NSMutableURLRequest(url: URL(string: url)!)
         let session = URLSession.shared
@@ -118,7 +126,7 @@ extension MainViewController: CLLocationManagerDelegate {
             
             DispatchQueue.main.async {
                 self.addVenuesOnMap()
-                print(json)
+
             }
             
         })
@@ -126,7 +134,13 @@ extension MainViewController: CLLocationManagerDelegate {
         task.resume()
     }
     
+    //MARK:- overlays & anotations
+    
     func addVenuesOnMap(){
+        self.gateringLbl.isHidden = true
+        releadBtn.isHidden = false
+        releadBtn.shake()
+        // loop trough fethed data and add anotations on it
         for venue in searchResults {
             guard let currentVenueName = venue["venue"]["name"].string else {return}
             let lat = venue["venue"]["location"]["lat"].doubleValue
@@ -135,9 +149,32 @@ extension MainViewController: CLLocationManagerDelegate {
 //            let currentVenueId = venue["venue"]["id"].stringValue
             guard let photoSuffix = venue["photo"]["suffix"].string else {return}
             
-            
-            mapView.addAnnotation(LocationSpot(title: currentVenueName, coordinate: currentVenueLocation, photoSuffix: photoSuffix))
-            
+            // keep burger free zona around predefined "from" center, distance in meters
+            if distance(from: tartuBusStationloc, to: currentVenueLocation) > 1000 {
+                mapView.addAnnotation(LocationSpot(title: currentVenueName, coordinate: currentVenueLocation, photoSuffix: photoSuffix))
+            }
         }
+        
     }
+    
+    func drawOverlay(location: CLLocationCoordinate2D, radius: CLLocationDistance) {
+        let circle = MKCircle(center: location, radius: radius)
+        mapView.addOverlay(circle)
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKCircleRenderer(overlay: overlay)
+        renderer.fillColor = UIColor.blue.withAlphaComponent(0.5)
+        renderer.strokeColor = UIColor.blue
+        renderer.lineWidth = 1
+        return renderer
+    }
+    
+    func distance(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) -> CLLocationDistance {
+        let from = CLLocation(latitude: from.latitude, longitude: from.longitude)
+        let to = CLLocation(latitude: to.latitude, longitude: to.longitude)
+        return from.distance(from: to)
+    }
+
+
 }
