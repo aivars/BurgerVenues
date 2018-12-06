@@ -42,8 +42,6 @@ extension HomeViewController: MKMapViewDelegate {
     
         coordinator?.showDetails(venueName: locationName, photoUrl: photoUrl)
 
-//        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
-//        location.mapItem(location: (pinAnotation?.coordinate)!).openInMaps(launchOptions: launchOptions)
     }
 }
 
@@ -88,14 +86,12 @@ extension HomeViewController: CLLocationManagerDelegate {
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate { 
             let coordinateRegion = MKCoordinateRegion(center: location, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-            mapView.setRegion(coordinateRegion, animated: true)
+            mapView.setRegion(coordinateRegion, animated: false)
 
             searchForVenue()
         }
     }
     
-    
- 
     func getCenterLocation(for mapView: MKMapView) -> CLLocationCoordinate2D {
         let latitude = mapView.centerCoordinate.latitude
         let longitude = mapView.centerCoordinate.longitude
@@ -125,6 +121,7 @@ extension HomeViewController: CLLocationManagerDelegate {
             self.searchResults = json["response"]["group"]["results"].arrayValue
             
             DispatchQueue.main.async {
+                print(self.searchResults)
                 self.addVenuesOnMap()
 
             }

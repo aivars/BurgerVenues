@@ -26,6 +26,7 @@ class HomeViewController: UIViewController, Storyboarder {
     let tartuBusStationloc = CLLocationCoordinate2D(latitude: 58.3780, longitude: 26.7321)
     let locationManager = CLLocationManager()
     let regionRadius: CLLocationDistance = 5000
+    var mapChangedFromUserInteraction = false
     
     var pinAnotation: LocationSpot?
     

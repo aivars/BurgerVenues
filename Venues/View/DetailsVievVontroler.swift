@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import Alamofire
 
 class DetailsVievControler: UIViewController, Storyboarder {
 
@@ -21,10 +22,7 @@ class DetailsVievControler: UIViewController, Storyboarder {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(locationName)
-        print (photoUrl)
-        
+   
         updateUi()
     }
     
@@ -40,6 +38,8 @@ class DetailsVievControler: UIViewController, Storyboarder {
         
         foodImageView.kf.indicatorType = .activity
         foodImageView.kf.setImage(with: url)
+        
+        burgerApiPost()
     }
     
     func generatePhotoUrl(endPoint: String) -> URL {
@@ -50,6 +50,33 @@ class DetailsVievControler: UIViewController, Storyboarder {
         return url!
         
     }
+    
+
+    
+    func burgerApiPost() {
+        
+        let constantApiUrl = "https://pplkdijj76.execute-api.eu-west-1.amazonaws.com/prod/recognize" // "https://jsonplaceholder.typicode.com/posts" // json test host
+        let testPhotoUrl = "https://igx.4sqi.net/img/general/500x500" + self.photoUrl
+//        let testPhotoUrl = "https://igx.4sqi.net/img/general/500x500/5163668_xXFcZo7sU8aa1ZMhiQ2kIP7NllD48m7qsSwr1mJnFj4.jpg"
+        
+        print(testPhotoUrl)
+        let parameters: Parameters = [
+            "urls": [testPhotoUrl]
+            ]
+        
+        Alamofire.request(constantApiUrl, method: .post, parameters: parameters, encoding: JSONEncoding(options: [])).responseJSON {
+            response in
+            print(NSString(data: (response.request?.httpBody)!, encoding: String.Encoding.utf8.rawValue) as Any)
+            switch response.result {
+            case .success:
+                print(response)
+                break
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     
     
     @IBAction func navigate(_ sender: Any) {

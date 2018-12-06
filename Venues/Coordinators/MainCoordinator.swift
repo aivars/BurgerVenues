@@ -34,6 +34,9 @@ class MainCoordinator: Coordinator {
     
     func navigate() {
         print("strat navigation")
+        
+        //        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
+        //        location.mapItem(location: (pinAnotation?.coordinate)!).openInMaps(launchOptions: launchOptions)
     }
     
 

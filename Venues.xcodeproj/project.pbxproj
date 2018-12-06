@@ -35,6 +35,7 @@
 		60E11E0E21A9CF3000F0685E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0D21A9CF3000F0685E /* SwiftyJSON.swift */; };
 		60E11E0F21A9CF3000F0685E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0D21A9CF3000F0685E /* SwiftyJSON.swift */; };
 		A1555975DA76BAA9734B66F4 /* Pods_VenuesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD1534150DCF6B1B1D73CD2 /* Pods_VenuesTests.framework */; };
+		B69991BEFBAFE2BE255432E2 /* Pods_VenuesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCD133A5DF264365053FF1F /* Pods_VenuesUITests.framework */; };
 		FB7699F57B975CBB119A0CC2 /* Pods_Venues.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8123C4C8C566AD44A46631 /* Pods_Venues.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69991BEFBAFE2BE255432E2 /* Pods_VenuesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +290,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6068D5C221B47A8900CCCE5D /* Build configuration list for PBXNativeTarget "VenuesUITests" */;
 			buildPhases = (
+				60E2B177B3BBFB2F580D8DF6 /* [CP] Check Pods Manifest.lock */,
 				6068D5B721B47A8900CCCE5D /* Sources */,
 				6068D5B821B47A8900CCCE5D /* Frameworks */,
 				6068D5B921B47A8900CCCE5D /* Resources */,
@@ -395,6 +398,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Venues/Pods-Venues-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60E2B177B3BBFB2F580D8DF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VenuesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C630D1EA1F2366280D3DA408 /* [CP] Check Pods Manifest.lock */ = {
@@ -724,6 +749,7 @@
 		};
 		6068D5C321B47A8900CCCE5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6F4115AF15680F9F5FC7244 /* Pods-VenuesUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UDP9QHRJQB;
@@ -743,6 +769,7 @@
 		};
 		6068D5C421B47A8900CCCE5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9E4BF47257EAD9268946CB4 /* Pods-VenuesUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UDP9QHRJQB;
