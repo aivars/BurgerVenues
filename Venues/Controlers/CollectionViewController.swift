@@ -54,8 +54,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return CGSize(width: width, height: width)
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if foundBurgerVenues.count > 12 {
             collectionView.isScrollEnabled = true

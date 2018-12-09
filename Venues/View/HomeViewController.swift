@@ -11,30 +11,22 @@ import MapKit
 import CoreLocation
 
 class HomeViewController: UIViewController, Storyboarder {
-    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeigt: NSLayoutConstraint!
     @IBOutlet weak var gateringLbl: UILabel!
     @IBOutlet weak var venuesLbl: UILabel!
     @IBOutlet weak var releadBtn: UIButton!
-    
     weak var coordinator: MainCoordinator?
-    
-    let client_id = "SKFVFAJQOCZ4SBO4UWWTAW21JB2YE2FVH0BCZRPYFILW2HV1"
-    let client_secret = "0C5B3OPU4DFMOBA2ZTO3LPKGBIM00ZY5ZYVOAJHRGPZQOJWG"
+    let clientId = "SKFVFAJQOCZ4SBO4UWWTAW21JB2YE2FVH0BCZRPYFILW2HV1"
+    let clientSecret = "0C5B3OPU4DFMOBA2ZTO3LPKGBIM00ZY5ZYVOAJHRGPZQOJWG"
     let tartuBusStationloc = CLLocationCoordinate2D(latitude: 58.3780, longitude: 26.7321)
     let locationManager = CLLocationManager()
     let regionRadius: CLLocationDistance = 5000
     var mapChangedFromUserInteraction = false
-    
     var pinAnotation: LocationSpot?
-    
-    // ToDo local storage for fetched data - Realm or CoreData
     var searchResults = [JSON]()
-//    var fetchedPhotUls = [String]()
     var foundBurgerVenues:[BurgerVenue] = []
-    
     enum UIUserInterfaceIdiom : Int {
         case unspecified
         case phone // iPhone and iPod touch style UI
@@ -51,7 +43,6 @@ class HomeViewController: UIViewController, Storyboarder {
         verifyLocationStatus()
         updateUi()
         self.drawOverlay(location: tartuBusStationloc, radius: 1000)
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,7 +59,7 @@ class HomeViewController: UIViewController, Storyboarder {
         mapView.layer.cornerRadius = 10
         releadBtn.roundCorners()
         releadBtn.imageEdgeInsets = UIEdgeInsets(top: 3.0, left: 3.0, bottom: 3.0, right: 3.0)
-        
+
         if UIDevice.current.userInterfaceIdiom == .pad {
             venuesLbl.font = venuesLbl.font.withSize(30)
         }

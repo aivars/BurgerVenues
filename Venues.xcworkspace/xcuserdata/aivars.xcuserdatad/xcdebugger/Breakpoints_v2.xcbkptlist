@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Venues/Controlers/MapViewControler.swift"
-            timestampString = "566076056.228301"
+            timestampString = "566080246.131072"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "searchForVenue()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Venues/Controlers/MapViewControler.swift"
-            timestampString = "566076056.228469"
+            timestampString = "566080246.131206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "searchForVenue()"
             landmarkType = "7">
          </BreakpointContent>

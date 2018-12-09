@@ -9,7 +9,7 @@
 
 import Foundation
 
-struct VenueSpot : Codable {
+struct VenueSpot: Codable {
     let meta: Meta?
     let response: Response?
 }

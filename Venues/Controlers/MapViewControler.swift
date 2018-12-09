@@ -10,7 +10,7 @@ import MapKit
 import CoreLocation
 
 extension HomeViewController: MKMapViewDelegate {
-    
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         if let annotation = annotation as? LocationSpot {
@@ -32,31 +32,26 @@ extension HomeViewController: MKMapViewDelegate {
         }
         return nil
     }
-    
-    
+
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
 
-        let location = view.annotation as! LocationSpot
+        guard let location = view.annotation as? LocationSpot else {return}
         guard let locationName = location.title else {return}
         guard let photoSufix = location.photoSuffix else {return}
         let photoUrl = "https://fastly.4sqi.net/img/general/500x500\(photoSufix)"
-    
         coordinator?.showDetails(venueName: locationName, photoUrl: photoUrl)
-
     }
 }
-
-
 
 extension HomeViewController: CLLocationManagerDelegate {
 
     // verify is location services available
     func verifyLocationStatus() {
         let status = CLLocationManager.authorizationStatus()
-        
+     
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:
-            StartLocationTracking()
+            startLocationTracking()
             return
         case .denied, .restricted:
             //localisation status denied, alert user
@@ -65,10 +60,9 @@ extension HomeViewController: CLLocationManagerDelegate {
             //location services are not available, request access
             locationManager.requestWhenInUseAuthorization()
         }
-        
     }
     
-    func StartLocationTracking() {
+    func startLocationTracking() {
         
         mapView.showsUserLocation = true
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -80,7 +74,7 @@ extension HomeViewController: CLLocationManagerDelegate {
     
 //    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
 //        if status == .authorizedAlways || status == .authorizedWhenInUse{
-//           StartLocationTracking()
+//           startLocationTracking()
 //        }
 //    }
 
@@ -106,7 +100,7 @@ extension HomeViewController: CLLocationManagerDelegate {
         self.gateringLbl.isHidden = false
         
         let currentLocation = getCenterLocation(for: mapView)
-        let url = "https://api.foursquare.com/v2/search/recommendations?ll=\(currentLocation.latitude),\(currentLocation.longitude)&v=20182411&categoryId=4bf58dd8d48988d16c941735&limit=250&client_id=\(client_id)&client_secret=\(client_secret)"
+        let url = "https://api.foursquare.com/v2/search/recommendations?ll=\(currentLocation.latitude),\(currentLocation.longitude)&v=20182411&categoryId=4bf58dd8d48988d16c941735&limit=250&client_id=\(clientId)&client_secret=\(clientSecret)"
         
         let request = NSMutableURLRequest(url: URL(string: url)!)
         let session = URLSession.shared
@@ -126,7 +120,7 @@ extension HomeViewController: CLLocationManagerDelegate {
             
             let json = JSON(data: data)
             print(json)
-//            self.searchResults = json["response"]["group"]["results"].arrayValue
+            self.searchResults = json["response"]["group"]["results"].arrayValue
             
             DispatchQueue.main.async {
                 print(self.searchResults)
@@ -180,6 +174,4 @@ extension HomeViewController: CLLocationManagerDelegate {
         let to = CLLocation(latitude: to.latitude, longitude: to.longitude)
         return from.distance(from: to)
     }
-
-
 }
