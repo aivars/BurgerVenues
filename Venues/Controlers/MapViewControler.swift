@@ -38,7 +38,8 @@ extension HomeViewController: MKMapViewDelegate {
 
         let location = view.annotation as! LocationSpot
         guard let locationName = location.title else {return}
-        guard let photoUrl = location.photoSuffix else {return}
+        guard let photoSufix = location.photoSuffix else {return}
+        let photoUrl = "https://fastly.4sqi.net/img/general/500x500\(photoSufix)"
     
         coordinator?.showDetails(venueName: locationName, photoUrl: photoUrl)
 
@@ -77,14 +78,14 @@ extension HomeViewController: CLLocationManagerDelegate {
         centerViewOnUserLocation()
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedAlways || status == .authorizedWhenInUse{
-           centerViewOnUserLocation()
-        }
-    }
+//    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+//        if status == .authorizedAlways || status == .authorizedWhenInUse{
+//           StartLocationTracking()
+//        }
+//    }
 
     func centerViewOnUserLocation() {
-        if let location = locationManager.location?.coordinate { 
+        if let location = locationManager.location?.coordinate {
             let coordinateRegion = MKCoordinateRegion(center: location, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
             mapView.setRegion(coordinateRegion, animated: false)
 
@@ -105,7 +106,7 @@ extension HomeViewController: CLLocationManagerDelegate {
         self.gateringLbl.isHidden = false
         
         let currentLocation = getCenterLocation(for: mapView)
-        let url = "https://api.foursquare.com/v2/search/recommendations?ll=\(currentLocation.latitude),\(currentLocation.longitude)&v=20182411&categoryId=4bf58dd8d48988d16c941735&limit=150&client_id=\(client_id)&client_secret=\(client_secret)"
+        let url = "https://api.foursquare.com/v2/search/recommendations?ll=\(currentLocation.latitude),\(currentLocation.longitude)&v=20182411&categoryId=4bf58dd8d48988d16c941735&limit=250&client_id=\(client_id)&client_secret=\(client_secret)"
         
         let request = NSMutableURLRequest(url: URL(string: url)!)
         let session = URLSession.shared
@@ -116,13 +117,21 @@ extension HomeViewController: CLLocationManagerDelegate {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
         let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, err -> Void in
+        
+            guard let data = data else {
+                return
+            }
+            let locationPoint = try? JSONDecoder().decode(VenueSpot.self, from: data)
+            print(locationPoint as Any)
             
-            let json = JSON(data: data!)
-            self.searchResults = json["response"]["group"]["results"].arrayValue
+            let json = JSON(data: data)
+            print(json)
+//            self.searchResults = json["response"]["group"]["results"].arrayValue
             
             DispatchQueue.main.async {
                 print(self.searchResults)
                 self.addVenuesOnMap()
+                self.findBurgers()
 
             }
             
@@ -130,7 +139,6 @@ extension HomeViewController: CLLocationManagerDelegate {
         
         task.resume()
     }
-    
     //MARK:- overlays & anotations
     
     func addVenuesOnMap(){
@@ -153,7 +161,7 @@ extension HomeViewController: CLLocationManagerDelegate {
         }
         
     }
-    
+        
     func drawOverlay(location: CLLocationCoordinate2D, radius: CLLocationDistance) {
         let circle = MKCircle(center: location, radius: radius)
         mapView.addOverlay(circle)

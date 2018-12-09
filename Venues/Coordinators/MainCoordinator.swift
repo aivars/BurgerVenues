@@ -25,7 +25,7 @@ class MainCoordinator: Coordinator {
     
     func showDetails(venueName: String, photoUrl: String) {
         let detailsVc = DetailsVievControler.instantiate()
-        detailsVc.locationName = venueName
+        detailsVc.venueName = venueName
         detailsVc.photoUrl = photoUrl
         navigationController.pushViewController(detailsVc, animated: true)
         print("show details")
@@ -33,7 +33,7 @@ class MainCoordinator: Coordinator {
     }
     
     func navigate() {
-        print("strat navigation")
+        print("start navigation")
         
         //        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
         //        location.mapItem(location: (pinAnotation?.coordinate)!).openInMaps(launchOptions: launchOptions)

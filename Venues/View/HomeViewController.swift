@@ -32,7 +32,8 @@ class HomeViewController: UIViewController, Storyboarder {
     
     // ToDo local storage for fetched data - Realm or CoreData
     var searchResults = [JSON]()
-    var fakeData = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+//    var fetchedPhotUls = [String]()
+    var foundBurgerVenues:[BurgerVenue] = []
     
     enum UIUserInterfaceIdiom : Int {
         case unspecified
@@ -54,7 +55,9 @@ class HomeViewController: UIViewController, Storyboarder {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        for burger in foundBurgerVenues {
+            print(burger)
+        }
 //        navigationController?.isNavigationBarHidden = true
     }
     

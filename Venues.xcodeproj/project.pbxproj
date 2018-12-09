@@ -8,53 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		600A9C7221B31033003B6281 /* DetailsVievVontroler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A9C7121B31033003B6281 /* DetailsVievVontroler.swift */; };
-		600A9C7321B31033003B6281 /* DetailsVievVontroler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A9C7121B31033003B6281 /* DetailsVievVontroler.swift */; };
 		600A9C7921B3C3AF003B6281 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A9C7821B3C3AF003B6281 /* UIButtonExtension.swift */; };
-		600A9C7A21B3C3AF003B6281 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A9C7821B3C3AF003B6281 /* UIButtonExtension.swift */; };
 		601E4C4521A87C640000F74E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601E4C4421A87C640000F74E /* AppDelegate.swift */; };
 		601E4C4721A87C640000F74E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601E4C4621A87C640000F74E /* HomeViewController.swift */; };
 		601E4C4A21A87C640000F74E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601E4C4821A87C640000F74E /* Main.storyboard */; };
 		601E4C4C21A87C6A0000F74E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 601E4C4B21A87C6A0000F74E /* Assets.xcassets */; };
 		601E4C4F21A87C6A0000F74E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601E4C4D21A87C6A0000F74E /* LaunchScreen.storyboard */; };
-		601E4C5A21A87C6A0000F74E /* VenuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601E4C5921A87C6A0000F74E /* VenuesTests.swift */; };
-		6068D5BE21B47A8900CCCE5D /* VenuesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068D5BD21B47A8900CCCE5D /* VenuesUITests.swift */; };
+		607952B121BCFAEA00A6C7A6 /* burgerVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607952B021BCFAEA00A6C7A6 /* burgerVenue.swift */; };
+		607952B321BD9A3A00A6C7A6 /* VenueSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607952B221BD9A3A00A6C7A6 /* VenueSpot.swift */; };
+		609F661E21BBF6130000CEDF /* BurgerApiConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F661D21BBF6130000CEDF /* BurgerApiConnect.swift */; };
 		60C554DE21A8867D00C217BF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C554DB21A8867C00C217BF /* Coordinator.swift */; };
-		60C554DF21A8867D00C217BF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C554DB21A8867C00C217BF /* Coordinator.swift */; };
 		60C554E121A8867D00C217BF /* Storyboarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C554DC21A8867C00C217BF /* Storyboarder.swift */; };
-		60C554E221A8867D00C217BF /* Storyboarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C554DC21A8867C00C217BF /* Storyboarder.swift */; };
 		60C554E421A8867D00C217BF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C554DD21A8867D00C217BF /* MainCoordinator.swift */; };
-		60C554E521A8867D00C217BF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C554DD21A8867D00C217BF /* MainCoordinator.swift */; };
 		60C554E921A88C3300C217BF /* LocationSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C554E821A88C3300C217BF /* LocationSpot.swift */; };
-		60C554EA21A88C3300C217BF /* LocationSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C554E821A88C3300C217BF /* LocationSpot.swift */; };
 		60E11DF821A8F7FD00F0685E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11DF721A8F7FD00F0685E /* CollectionViewCell.swift */; };
-		60E11DF921A8F7FD00F0685E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11DF721A8F7FD00F0685E /* CollectionViewCell.swift */; };
 		60E11E0021A9C64300F0685E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11DFF21A9C64300F0685E /* CollectionViewController.swift */; };
-		60E11E0121A9C64300F0685E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11DFF21A9C64300F0685E /* CollectionViewController.swift */; };
 		60E11E0421A9C70400F0685E /* MapViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0321A9C70400F0685E /* MapViewControler.swift */; };
-		60E11E0521A9C70400F0685E /* MapViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0321A9C70400F0685E /* MapViewControler.swift */; };
 		60E11E0E21A9CF3000F0685E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0D21A9CF3000F0685E /* SwiftyJSON.swift */; };
-		60E11E0F21A9CF3000F0685E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0D21A9CF3000F0685E /* SwiftyJSON.swift */; };
-		A1555975DA76BAA9734B66F4 /* Pods_VenuesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD1534150DCF6B1B1D73CD2 /* Pods_VenuesTests.framework */; };
-		B69991BEFBAFE2BE255432E2 /* Pods_VenuesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCD133A5DF264365053FF1F /* Pods_VenuesUITests.framework */; };
 		FB7699F57B975CBB119A0CC2 /* Pods_Venues.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8123C4C8C566AD44A46631 /* Pods_Venues.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		601E4C5621A87C6A0000F74E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 601E4C3921A87C640000F74E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 601E4C4021A87C640000F74E;
-			remoteInfo = Venues;
-		};
-		6068D5C021B47A8900CCCE5D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 601E4C3921A87C640000F74E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 601E4C4021A87C640000F74E;
-			remoteInfo = Venues;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		593658F3F04B609B5710DCB0 /* Pods-Venues.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venues.release.xcconfig"; path = "Pods/Target Support Files/Pods-Venues/Pods-Venues.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,12 +39,9 @@
 		601E4C4B21A87C6A0000F74E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		601E4C4E21A87C6A0000F74E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		601E4C5021A87C6A0000F74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		601E4C5521A87C6A0000F74E /* VenuesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenuesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		601E4C5921A87C6A0000F74E /* VenuesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesTests.swift; sourceTree = "<group>"; };
-		601E4C5B21A87C6A0000F74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6068D5BB21B47A8900CCCE5D /* VenuesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenuesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6068D5BD21B47A8900CCCE5D /* VenuesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesUITests.swift; sourceTree = "<group>"; };
-		6068D5BF21B47A8900CCCE5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607952B021BCFAEA00A6C7A6 /* burgerVenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burgerVenue.swift; sourceTree = "<group>"; };
+		607952B221BD9A3A00A6C7A6 /* VenueSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VenueSpot.swift; path = ../../VenueSpot.swift; sourceTree = "<group>"; };
+		609F661D21BBF6130000CEDF /* BurgerApiConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerApiConnect.swift; sourceTree = "<group>"; };
 		60C554DB21A8867C00C217BF /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		60C554DC21A8867C00C217BF /* Storyboarder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarder.swift; sourceTree = "<group>"; };
 		60C554DD21A8867D00C217BF /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -97,22 +66,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB7699F57B975CBB119A0CC2 /* Pods_Venues.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		601E4C5221A87C6A0000F74E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A1555975DA76BAA9734B66F4 /* Pods_VenuesTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6068D5B821B47A8900CCCE5D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B69991BEFBAFE2BE255432E2 /* Pods_VenuesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +100,7 @@
 			children = (
 				60E11E0D21A9CF3000F0685E /* SwiftyJSON.swift */,
 				600A9C7821B3C3AF003B6281 /* UIButtonExtension.swift */,
+				609F661D21BBF6130000CEDF /* BurgerApiConnect.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -155,8 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				601E4C4321A87C640000F74E /* Venues */,
-				601E4C5821A87C6A0000F74E /* VenuesTests */,
-				6068D5BC21B47A8900CCCE5D /* VenuesUITests */,
 				601E4C4221A87C640000F74E /* Products */,
 				2BEB90D8A1BDD0B5FDB9E585 /* Pods */,
 				E22F558F4B4A5EEA378E6C74 /* Frameworks */,
@@ -167,8 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				601E4C4121A87C640000F74E /* Venues.app */,
-				601E4C5521A87C6A0000F74E /* VenuesTests.xctest */,
-				6068D5BB21B47A8900CCCE5D /* VenuesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,24 +138,6 @@
 				601E4C5021A87C6A0000F74E /* Info.plist */,
 			);
 			path = Venues;
-			sourceTree = "<group>";
-		};
-		601E4C5821A87C6A0000F74E /* VenuesTests */ = {
-			isa = PBXGroup;
-			children = (
-				601E4C5921A87C6A0000F74E /* VenuesTests.swift */,
-				601E4C5B21A87C6A0000F74E /* Info.plist */,
-			);
-			path = VenuesTests;
-			sourceTree = "<group>";
-		};
-		6068D5BC21B47A8900CCCE5D /* VenuesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6068D5BD21B47A8900CCCE5D /* VenuesUITests.swift */,
-				6068D5BF21B47A8900CCCE5D /* Info.plist */,
-			);
-			path = VenuesUITests;
 			sourceTree = "<group>";
 		};
 		60C554E721A8868900C217BF /* Coordinators */ = {
@@ -231,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				60C554E821A88C3300C217BF /* LocationSpot.swift */,
+				607952B221BD9A3A00A6C7A6 /* VenueSpot.swift */,
+				607952B021BCFAEA00A6C7A6 /* burgerVenue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +191,7 @@
 				601E4C3E21A87C640000F74E /* Frameworks */,
 				601E4C3F21A87C640000F74E /* Resources */,
 				46394A94676856921E024893 /* [CP] Embed Pods Frameworks */,
+				60B5E03121BBED2B0016BB9D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -266,44 +201,6 @@
 			productName = Venues;
 			productReference = 601E4C4121A87C640000F74E /* Venues.app */;
 			productType = "com.apple.product-type.application";
-		};
-		601E4C5421A87C6A0000F74E /* VenuesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 601E4C6C21A87C6A0000F74E /* Build configuration list for PBXNativeTarget "VenuesTests" */;
-			buildPhases = (
-				D4E0523080BBE30FBEAB8D16 /* [CP] Check Pods Manifest.lock */,
-				601E4C5121A87C6A0000F74E /* Sources */,
-				601E4C5221A87C6A0000F74E /* Frameworks */,
-				601E4C5321A87C6A0000F74E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				601E4C5721A87C6A0000F74E /* PBXTargetDependency */,
-			);
-			name = VenuesTests;
-			productName = VenuesTests;
-			productReference = 601E4C5521A87C6A0000F74E /* VenuesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		6068D5BA21B47A8900CCCE5D /* VenuesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6068D5C221B47A8900CCCE5D /* Build configuration list for PBXNativeTarget "VenuesUITests" */;
-			buildPhases = (
-				60E2B177B3BBFB2F580D8DF6 /* [CP] Check Pods Manifest.lock */,
-				6068D5B721B47A8900CCCE5D /* Sources */,
-				6068D5B821B47A8900CCCE5D /* Frameworks */,
-				6068D5B921B47A8900CCCE5D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6068D5C121B47A8900CCCE5D /* PBXTargetDependency */,
-			);
-			name = VenuesUITests;
-			productName = VenuesUITests;
-			productReference = 6068D5BB21B47A8900CCCE5D /* VenuesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -317,14 +214,6 @@
 				TargetAttributes = {
 					601E4C4021A87C640000F74E = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					601E4C5421A87C6A0000F74E = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 601E4C4021A87C640000F74E;
-					};
-					6068D5BA21B47A8900CCCE5D = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 601E4C4021A87C640000F74E;
 					};
 				};
 			};
@@ -342,8 +231,6 @@
 			projectRoot = "";
 			targets = (
 				601E4C4021A87C640000F74E /* Venues */,
-				601E4C5421A87C6A0000F74E /* VenuesTests */,
-				6068D5BA21B47A8900CCCE5D /* VenuesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -359,20 +246,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		601E4C5321A87C6A0000F74E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6068D5B921B47A8900CCCE5D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -385,14 +258,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Venues/Pods-Venues-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,7 +271,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Venues/Pods-Venues-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		60E2B177B3BBFB2F580D8DF6 /* [CP] Check Pods Manifest.lock */ = {
+		60B5E03121BBED2B0016BB9D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,19 +279,14 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VenuesUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#if which swiftlint >/dev/null; then\n#swiftlint\n#else\n#echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		C630D1EA1F2366280D3DA408 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -444,28 +310,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D4E0523080BBE30FBEAB8D16 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VenuesTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -473,10 +317,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				607952B121BCFAEA00A6C7A6 /* burgerVenue.swift in Sources */,
 				60E11E0421A9C70400F0685E /* MapViewControler.swift in Sources */,
+				607952B321BD9A3A00A6C7A6 /* VenueSpot.swift in Sources */,
 				601E4C4721A87C640000F74E /* HomeViewController.swift in Sources */,
 				600A9C7921B3C3AF003B6281 /* UIButtonExtension.swift in Sources */,
 				60E11DF821A8F7FD00F0685E /* CollectionViewCell.swift in Sources */,
+				609F661E21BBF6130000CEDF /* BurgerApiConnect.swift in Sources */,
 				60E11E0021A9C64300F0685E /* CollectionViewController.swift in Sources */,
 				600A9C7221B31033003B6281 /* DetailsVievVontroler.swift in Sources */,
 				60C554E121A8867D00C217BF /* Storyboarder.swift in Sources */,
@@ -488,46 +335,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		601E4C5121A87C6A0000F74E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				60C554DF21A8867D00C217BF /* Coordinator.swift in Sources */,
-				60C554E521A8867D00C217BF /* MainCoordinator.swift in Sources */,
-				60C554EA21A88C3300C217BF /* LocationSpot.swift in Sources */,
-				60E11E0F21A9CF3000F0685E /* SwiftyJSON.swift in Sources */,
-				60E11E0121A9C64300F0685E /* CollectionViewController.swift in Sources */,
-				600A9C7A21B3C3AF003B6281 /* UIButtonExtension.swift in Sources */,
-				60E11DF921A8F7FD00F0685E /* CollectionViewCell.swift in Sources */,
-				60C554E221A8867D00C217BF /* Storyboarder.swift in Sources */,
-				60E11E0521A9C70400F0685E /* MapViewControler.swift in Sources */,
-				601E4C5A21A87C6A0000F74E /* VenuesTests.swift in Sources */,
-				600A9C7321B31033003B6281 /* DetailsVievVontroler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6068D5B721B47A8900CCCE5D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6068D5BE21B47A8900CCCE5D /* VenuesUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		601E4C5721A87C6A0000F74E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 601E4C4021A87C640000F74E /* Venues */;
-			targetProxy = 601E4C5621A87C6A0000F74E /* PBXContainerItemProxy */;
-		};
-		6068D5C121B47A8900CCCE5D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 601E4C4021A87C640000F74E /* Venues */;
-			targetProxy = 6068D5C021B47A8900CCCE5D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		601E4C4821A87C640000F74E /* Main.storyboard */ = {
@@ -703,90 +511,6 @@
 			};
 			name = Release;
 		};
-		601E4C6D21A87C6A0000F74E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A33A60C484A80FCB0A855378 /* Pods-VenuesTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDP9QHRJQB;
-				INFOPLIST_FILE = VenuesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aivarsmeijers.VenuesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Venues.app/Venues";
-			};
-			name = Debug;
-		};
-		601E4C6E21A87C6A0000F74E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D068545AB0272BF1637A0FA8 /* Pods-VenuesTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDP9QHRJQB;
-				INFOPLIST_FILE = VenuesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aivarsmeijers.VenuesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Venues.app/Venues";
-			};
-			name = Release;
-		};
-		6068D5C321B47A8900CCCE5D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6F4115AF15680F9F5FC7244 /* Pods-VenuesUITests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDP9QHRJQB;
-				INFOPLIST_FILE = VenuesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aivarsmeijers.VenuesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Venues;
-			};
-			name = Debug;
-		};
-		6068D5C421B47A8900CCCE5D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9E4BF47257EAD9268946CB4 /* Pods-VenuesUITests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDP9QHRJQB;
-				INFOPLIST_FILE = VenuesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aivarsmeijers.VenuesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Venues;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -804,24 +528,6 @@
 			buildConfigurations = (
 				601E4C6A21A87C6A0000F74E /* Debug */,
 				601E4C6B21A87C6A0000F74E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		601E4C6C21A87C6A0000F74E /* Build configuration list for PBXNativeTarget "VenuesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				601E4C6D21A87C6A0000F74E /* Debug */,
-				601E4C6E21A87C6A0000F74E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6068D5C221B47A8900CCCE5D /* Build configuration list for PBXNativeTarget "VenuesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6068D5C321B47A8900CCCE5D /* Debug */,
-				6068D5C421B47A8900CCCE5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

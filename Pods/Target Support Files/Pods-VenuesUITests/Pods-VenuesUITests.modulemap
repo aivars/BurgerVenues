@@ -1,6 +1,0 @@
-framework module Pods_VenuesUITests {
-  umbrella header "Pods-VenuesUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

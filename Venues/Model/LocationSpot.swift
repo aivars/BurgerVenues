@@ -11,11 +11,11 @@ import MapKit
 import Contacts
 
 class LocationSpot: NSObject, MKAnnotation {
-    
+
     let title: String?
     let coordinate: CLLocationCoordinate2D
     let photoSuffix: String?
-    
+
     init(title: String, coordinate: CLLocationCoordinate2D, photoSuffix: String) {
         self.title = title
         self.coordinate = coordinate
