@@ -34,10 +34,6 @@ class MainCoordinator: Coordinator {
     
     func navigate() {
         print("start navigation")
-        
-        //        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
-        //        location.mapItem(location: (pinAnotation?.coordinate)!).openInMaps(launchOptions: launchOptions)
     }
-    
 
 }

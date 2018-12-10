@@ -37,28 +37,11 @@ class DetailsVievControler: UIViewController, Storyboarder {
         foodImageView.kf.indicatorType = .activity
         foodImageView.kf.setImage(with: url)
         
-//        testBurgerUls()
-        
     }
     
-//
-//    func testBurgerUls(){
-//        let burgerApi = BurgerApiConnect()
-//        let testPhotoUrl = "https://fastly.4sqi.net/img/general/500x500\(photoUrl)"
-//        let newBurgerUrl = {(result: String) in
-//            if result != "error" {
-//                let burgerUrl = result
-//                self.burgerVenue.venueName = self.venueName
-//                self.burgerVenue.imageUrl = burgerUrl
-//                foundBurgerVenues.append(burgerVenue)
-//            }
-//        }
-//        burgerApi.verifyUrls(imageUrls: [testPhotoUrl], completionHandler: newBurgerUrl)
-//    }
-//
-//
     @IBAction func navigate(_ sender: Any) {
         coordinator?.navigate()
+        // nothing happens here yet
     }
 
 }

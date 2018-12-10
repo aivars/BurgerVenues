@@ -11,7 +11,6 @@ import UIKit
 extension UIButton {
     
      func pulsate() {
-        
         let pulse = CASpringAnimation(keyPath: "transform.scale")
         pulse.duration = 0.6
         pulse.fromValue = 0.95
@@ -25,7 +24,6 @@ extension UIButton {
     }
     
     func flash() {
-        
         let flash = CABasicAnimation(keyPath: "opacity")
         flash.duration = 0.5
         flash.fromValue = 1
@@ -39,7 +37,6 @@ extension UIButton {
     
     
     func shake() {
-        
         let shake = CABasicAnimation(keyPath: "position")
         shake.duration = 0.1
         shake.repeatCount = 2
@@ -58,14 +55,12 @@ extension UIButton {
     }
     
     func roundCorners() {
-        
         layoutIfNeeded()
         layer.cornerRadius = frame.size.height/2
         layer.masksToBounds = true
     }
     
     func ovalCorners(radius: CGFloat) {
-        
         layoutIfNeeded()
         layer.cornerRadius = radius
         layer.masksToBounds = true

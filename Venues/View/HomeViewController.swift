@@ -53,7 +53,6 @@ class HomeViewController: UIViewController, Storyboarder {
     }
     
     private func updateUi() {
-        
         updateCollectionViewSize()
         mapView.layer.masksToBounds = true
         mapView.layer.cornerRadius = 10

@@ -12,7 +12,6 @@ import CoreLocation
 extension HomeViewController: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
         if let annotation = annotation as? LocationSpot {
             let identifier = "pin"
             var view: MKPinAnnotationView
@@ -34,7 +33,6 @@ extension HomeViewController: MKMapViewDelegate {
     }
 
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-
         guard let location = view.annotation as? LocationSpot else {return}
         guard let locationName = location.title else {return}
         guard let photoSufix = location.photoSuffix else {return}
@@ -44,7 +42,6 @@ extension HomeViewController: MKMapViewDelegate {
 }
 
 extension HomeViewController: CLLocationManagerDelegate {
-
     // verify is location services available
     func verifyLocationStatus() {
         let status = CLLocationManager.authorizationStatus()
@@ -63,7 +60,6 @@ extension HomeViewController: CLLocationManagerDelegate {
     }
     
     func startLocationTracking() {
-        
         mapView.showsUserLocation = true
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = 100
@@ -71,12 +67,6 @@ extension HomeViewController: CLLocationManagerDelegate {
         
         centerViewOnUserLocation()
     }
-    
-//    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-//        if status == .authorizedAlways || status == .authorizedWhenInUse{
-//           startLocationTracking()
-//        }
-//    }
 
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
@@ -95,7 +85,6 @@ extension HomeViewController: CLLocationManagerDelegate {
     }
     
     func searchForVenue() {
-        
         releadBtn.isHidden = true
         self.gateringLbl.isHidden = false
         
@@ -115,15 +104,15 @@ extension HomeViewController: CLLocationManagerDelegate {
             guard let data = data else {
                 return
             }
-            let locationPoint = try? JSONDecoder().decode(VenueSpot.self, from: data)
-            print(locationPoint as Any)
+            //VenueSpot requestID is parsed from JSON but nested data are not
+//            let locationPoint = try? JSONDecoder().decode(VenueSpot.self, from: data)
+//            print(locationPoint as Any)
             
             let json = JSON(data: data)
-            print(json)
+//            print(json)
             self.searchResults = json["response"]["group"]["results"].arrayValue
             
             DispatchQueue.main.async {
-                print(self.searchResults)
                 self.addVenuesOnMap()
                 self.findBurgers()
 
@@ -134,7 +123,6 @@ extension HomeViewController: CLLocationManagerDelegate {
         task.resume()
     }
     //MARK:- overlays & anotations
-    
     func addVenuesOnMap(){
         self.gateringLbl.isHidden = true
         releadBtn.isHidden = false
@@ -145,7 +133,6 @@ extension HomeViewController: CLLocationManagerDelegate {
             let lat = venue["venue"]["location"]["lat"].doubleValue
             let lng = venue["venue"]["location"]["lng"].doubleValue
             let currentVenueLocation = CLLocationCoordinate2D(latitude: lat, longitude: lng)
-//            let currentVenueId = venue["venue"]["id"].stringValue
             guard let photoSuffix = venue["photo"]["suffix"].string else {return}
             
             // keep burger free zona around predefined "from" center, distance in meters

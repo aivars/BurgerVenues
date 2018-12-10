@@ -19,7 +19,6 @@ struct Result: Codable {
 struct BurgerApiConnect {
     
     func verifyUrls (imageUrls: [String], completionHandler: @escaping (String) -> ()) {
-        
         let staticApiUrl = "https://pplkdijj76.execute-api.eu-west-1.amazonaws.com/prod/recognize"
         guard let apiUrl = URL(string:  staticApiUrl) else {
             completionHandler ("error")

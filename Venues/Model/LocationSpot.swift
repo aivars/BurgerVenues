@@ -11,7 +11,6 @@ import MapKit
 import Contacts
 
 class LocationSpot: NSObject, MKAnnotation {
-
     let title: String?
     let coordinate: CLLocationCoordinate2D
     let photoSuffix: String?
@@ -24,3 +23,10 @@ class LocationSpot: NSObject, MKAnnotation {
     }
 
 }
+
+/*
+ * Stil looks that class is right way to go
+ * 1) CLLocationCoordinate2D is not usable in Codable struct
+ *    Lang&Long doubles should be used instead  of CLLocationCoordinate2D
+ * 2) This class inherits MKAnnotation to asociate it with location
+ */
