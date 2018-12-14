@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,20 +15,20 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Venues" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSM-gx-tch">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coe-hk-1x9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="907"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="946"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone_Bacground" translatesAutoresizingMaskIntoConstraints="NO" id="bHG-eN-jYt">
-                                                <rect key="frame" x="0.0" y="-42" width="375" height="991"/>
+                                                <rect key="frame" x="0.0" y="-42" width="414" height="1030"/>
                                             </imageView>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0e-e5-Y4a">
-                                                <rect key="frame" x="16" y="108" width="343" height="343"/>
+                                                <rect key="frame" x="16" y="108" width="382" height="382"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Z0e-e5-Y4a" secondAttribute="height" multiplier="1:1" id="vFb-YZ-1CU">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="400"/>
@@ -36,7 +36,7 @@
                                                 </constraints>
                                             </mapView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bCU-JM-n1C">
-                                                <rect key="frame" x="16" y="483" width="343" height="400"/>
+                                                <rect key="frame" x="16" y="522" width="382" height="400"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="400" id="XDO-op-uv1"/>
@@ -87,13 +87,13 @@
                                                 </cells>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOf-bN-83u">
-                                                <rect key="frame" x="16" y="32" width="172.5" height="60"/>
+                                                <rect key="frame" x="16" y="32" width="172.66666666666666" height="60"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gathering data ..." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVf-99-5sF">
-                                                <rect key="frame" x="242.5" y="74" width="116.5" height="18"/>
+                                                <rect key="frame" x="281.66666666666669" y="74" width="116.33333333333331" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="116.5" id="Z9c-5E-LVs"/>
                                                     <constraint firstAttribute="height" constant="18" id="p0V-B8-3oL"/>
@@ -103,7 +103,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRH-tC-7bu">
-                                                <rect key="frame" x="309" y="401" width="35" height="35"/>
+                                                <rect key="frame" x="348" y="440" width="35" height="35"/>
                                                 <color key="backgroundColor" red="0.30796074870000001" green="0.28287678960000001" blue="0.70374917979999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="HZw-pe-tQY"/>
@@ -176,14 +176,14 @@
             <objects>
                 <viewController storyboardIdentifier="DetailsVievControler" id="Yn2-mA-s1j" customClass="DetailsVievControler" customModule="Venues" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l60-bz-giA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone_Bacground" translatesAutoresizingMaskIntoConstraints="NO" id="alX-YF-Q94">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANU-xW-NUJ">
-                                <rect key="frame" x="37.5" y="577" width="300" height="45"/>
+                                <rect key="frame" x="57" y="772" width="300" height="45"/>
                                 <color key="backgroundColor" red="0.30796074867248535" green="0.28287678956985474" blue="0.70374917984008789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Nan-T5-2m4"/>
@@ -198,7 +198,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger" translatesAutoresizingMaskIntoConstraints="NO" id="B6K-Qf-ft4">
-                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="O3I-md-zpx">
                                         <variation key="heightClass=regular-widthClass=regular" constant="500"/>
