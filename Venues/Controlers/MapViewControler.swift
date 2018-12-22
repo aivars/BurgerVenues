@@ -8,6 +8,7 @@
 
 import MapKit
 import CoreLocation
+import os.log
 
 extension HomeViewController: MKMapViewDelegate {
 
@@ -52,7 +53,7 @@ extension HomeViewController: CLLocationManagerDelegate {
             return
         case .denied, .restricted:
             //localisation status denied, alert user
-            print ("localisation status denied buy user")
+            os_log("localisation status denied buy user", log: Log.general, type: .info)
         default:
             //location services are not available, request access
             locationManager.requestWhenInUseAuthorization()
@@ -106,10 +107,8 @@ extension HomeViewController: CLLocationManagerDelegate {
             }
             //VenueSpot requestID is parsed from JSON but nested data are not
 //            let locationPoint = try? JSONDecoder().decode(VenueSpot.self, from: data)
-//            print(locationPoint as Any)
             
             let json = JSON(data: data)
-//            print(json)
             self.searchResults = json["response"]["group"]["results"].arrayValue
             
             DispatchQueue.main.async {

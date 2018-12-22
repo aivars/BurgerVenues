@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 
 class HomeViewController: UIViewController, Storyboarder {
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeigt: NSLayoutConstraint!
@@ -21,9 +22,10 @@ class HomeViewController: UIViewController, Storyboarder {
     let clientId = "SKFVFAJQOCZ4SBO4UWWTAW21JB2YE2FVH0BCZRPYFILW2HV1"
     let clientSecret = "0C5B3OPU4DFMOBA2ZTO3LPKGBIM00ZY5ZYVOAJHRGPZQOJWG"
     let tartuBusStationloc = CLLocationCoordinate2D(latitude: 58.3780, longitude: 26.7321)
-    let locationManager = CLLocationManager()
+    
+    var locationManager = CLLocationManager()
     let regionRadius: CLLocationDistance = 5000
-    var mapChangedFromUserInteraction = false
+    
     var pinAnotation: LocationSpot?
     var searchResults = [JSON]()
     var foundBurgerVenues:[BurgerVenue] = []
@@ -32,7 +34,7 @@ class HomeViewController: UIViewController, Storyboarder {
         case phone // iPhone and iPod touch style UI
         case pad // iPad style UI
     }
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -43,13 +45,6 @@ class HomeViewController: UIViewController, Storyboarder {
         verifyLocationStatus()
         updateUi()
         self.drawOverlay(location: tartuBusStationloc, radius: 1000)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        for burger in foundBurgerVenues {
-            print(burger)
-        }
-//        navigationController?.isNavigationBarHidden = true
     }
     
     private func updateUi() {

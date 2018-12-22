@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Venues/Controlers/MapViewControler.swift"
-            timestampString = "566115854.665092"
+            timestampString = "567146692.5298851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "searchForVenue()"
             landmarkType = "7">
          </BreakpointContent>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class MainCoordinator: Coordinator {
     
@@ -28,12 +29,13 @@ class MainCoordinator: Coordinator {
         detailsVc.venueName = venueName
         detailsVc.photoUrl = photoUrl
         navigationController.pushViewController(detailsVc, animated: true)
-        print("show details")
+        
+        os_log("show details", log: Log.general, type: .info)
         
     }
     
     func navigate() {
-        print("start navigation")
+        os_log("start navigation", log: Log.general, type: .info)
     }
 
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import os.log
 
 struct Urls: Codable {
     let urls: [String]
@@ -26,9 +27,7 @@ struct BurgerApiConnect {
         }
         
         let urls = Urls(urls: imageUrls)
-        print(imageUrls)
-        print(urls)
-        
+
         var request = URLRequest(url: apiUrl)
         request.httpMethod = "POST"
         
@@ -39,7 +38,8 @@ struct BurgerApiConnect {
             let session = URLSession.shared
             session.dataTask(with: request) { data, _, error in
                 if let error = error {
-                    print(error.localizedDescription)
+//                    print(error.localizedDescription)
+                    os_log("error: %s", log: Log.general, type: .error, error as CVarArg)
                     return
                 }
                 guard let data = data else {
@@ -49,21 +49,19 @@ struct BurgerApiConnect {
                 
                 do {
                     let result = try JSONDecoder().decode(Result.self, from: data)
-                    if result.urlWithBurger != nil {
                         guard let burgerUrl = result.urlWithBurger else {
                             completionHandler("error")
                             return
                         }
                         completionHandler(burgerUrl)
-                    }
                 } catch {
-                    print(error)
+                    os_log("error: %s", log: Log.general, type: .error, error as CVarArg)
                     completionHandler ("error")
                 }
                 
                 }.resume()
         } catch {
-            print("Can't encode JSON")
+            os_log("Can't encode JSON", log: Log.general, type: .error)
             completionHandler ("error")
         }
     }
