@@ -16,7 +16,7 @@ class DetailsVievControler: UIViewController, Storyboarder {
     
     var venueName = "Unknown"
     var photoUrl = ""
-    var burgerVenue = BurgerVenue()
+    var burgerVenue = BurgerVenue(imageUrl: "", venueName: "")
     
     weak var coordinator: MainCoordinator?
     

@@ -21,9 +21,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 if result != "error" {
                     DispatchQueue.main.async {
                         let burgerUrl = result
-                        var burgerVenue = BurgerVenue()
-                        burgerVenue.venueName = currentVenueName
-                        burgerVenue.imageUrl = burgerUrl
+                        let burgerVenue = BurgerVenue(imageUrl: currentVenueName, venueName: burgerUrl)
                         self.foundBurgerVenues.append(burgerVenue)
                         self.collectionView.reloadData()
                     }

@@ -8,6 +8,7 @@
 
 import MapKit
 import CoreLocation
+import SwiftyJSON
 import os.log
 
 extension HomeViewController: MKMapViewDelegate {
@@ -107,15 +108,19 @@ extension HomeViewController: CLLocationManagerDelegate {
             }
             //VenueSpot requestID is parsed from JSON but nested data are not
 //            let locationPoint = try? JSONDecoder().decode(VenueSpot.self, from: data)
-            
-            let json = JSON(data: data)
-            self.searchResults = json["response"]["group"]["results"].arrayValue
-            
-            DispatchQueue.main.async {
-                self.addVenuesOnMap()
-                self.findBurgers()
-
+            do {
+                let json = try JSON(data: data)
+                self.searchResults = json["response"]["group"]["results"].arrayValue
+                
+                DispatchQueue.main.async {
+                    self.addVenuesOnMap()
+                    self.findBurgers()
+                    
+                }
+            } catch {
+                os_log("SwiftyJson error", log: Log.general, type: .error)
             }
+            
             
         })
         

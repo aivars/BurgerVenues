@@ -6,6 +6,7 @@ target 'Venues' do
   use_frameworks!
   pod 'Kingfisher', '~> 4.0'
   pod 'SwiftLint'
+  pod 'SwiftyJSON', '~> 4.0'
 
 
   # Pods for Venues
