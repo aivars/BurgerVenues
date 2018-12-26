@@ -23,5 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         return true
     }
+    
+    func resetIfNeeded() {
+        guard CommandLine.arguments.contains("-reset") else {
+            return
+        }
+        let defaultsName = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: defaultsName)
+    }
 }
 
