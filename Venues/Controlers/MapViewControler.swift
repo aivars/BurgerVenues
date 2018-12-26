@@ -91,7 +91,7 @@ extension HomeViewController: CLLocationManagerDelegate {
         self.gateringLbl.isHidden = false
         
         let currentLocation = getCenterLocation(for: mapView)
-        let url = "https://api.foursquare.com/v2/search/recommendations?ll=\(currentLocation.latitude),\(currentLocation.longitude)&v=20182411&categoryId=4bf58dd8d48988d16c941735&limit=250&client_id=\(clientId)&client_secret=\(clientSecret)"
+        let url = "https://api.foursquare.com/v2/search/recommendations?ll=\(currentLocation.latitude),\(currentLocation.longitude)&v=20182411&categoryId=4bf58dd8d48988d16c941735&limit=250&client_id=\(Constants.clientId)&client_secret=\(Constants.clientSecret)"
         
         let request = NSMutableURLRequest(url: URL(string: url)!)
         let session = URLSession.shared
@@ -140,7 +140,7 @@ extension HomeViewController: CLLocationManagerDelegate {
             guard let photoSuffix = venue["photo"]["suffix"].string else {return}
             
             // keep burger free zona around predefined "from" center, distance in meters
-            if distance(from: tartuBusStationloc, to: currentVenueLocation) > 1000 {
+            if distance(from: Constants.tartuBusStationloc, to: currentVenueLocation) > 1000 {
                 mapView.addAnnotation(LocationSpot(title: currentVenueName, coordinate: currentVenueLocation, photoSuffix: photoSuffix))
             }
         }

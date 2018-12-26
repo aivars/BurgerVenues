@@ -25,6 +25,7 @@
 		60C554E421A8867D00C217BF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C554DD21A8867D00C217BF /* MainCoordinator.swift */; };
 		60C554E921A88C3300C217BF /* LocationSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C554E821A88C3300C217BF /* LocationSpot.swift */; };
 		60D72C8421D3505A005B5198 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D72C8321D3505A005B5198 /* SnapshotHelper.swift */; };
+		60D72C8621D3BC88005B5198 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D72C8521D3BC88005B5198 /* Constants.swift */; };
 		60E11DF821A8F7FD00F0685E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11DF721A8F7FD00F0685E /* CollectionViewCell.swift */; };
 		60E11E0021A9C64300F0685E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11DFF21A9C64300F0685E /* CollectionViewController.swift */; };
 		60E11E0421A9C70400F0685E /* MapViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E11E0321A9C70400F0685E /* MapViewControler.swift */; };
@@ -74,6 +75,7 @@
 		60C554DD21A8867D00C217BF /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		60C554E821A88C3300C217BF /* LocationSpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSpot.swift; sourceTree = "<group>"; };
 		60D72C8321D3505A005B5198 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		60D72C8521D3BC88005B5198 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		60E11DF721A8F7FD00F0685E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		60E11DFF21A9C64300F0685E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		60E11E0321A9C70400F0685E /* MapViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControler.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				600A9C7821B3C3AF003B6281 /* UIButtonExtension.swift */,
 				609F661D21BBF6130000CEDF /* BurgerApiConnect.swift */,
 				60BD67A521CDF4840025A1CC /* Log.swift */,
+				60D72C8521D3BC88005B5198 /* Constants.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				600A9C7921B3C3AF003B6281 /* UIButtonExtension.swift in Sources */,
 				60E11DF821A8F7FD00F0685E /* CollectionViewCell.swift in Sources */,
 				60BD67A621CDF4840025A1CC /* Log.swift in Sources */,
+				60D72C8621D3BC88005B5198 /* Constants.swift in Sources */,
 				609F661E21BBF6130000CEDF /* BurgerApiConnect.swift in Sources */,
 				60E11E0021A9C64300F0685E /* CollectionViewController.swift in Sources */,
 				600A9C7221B31033003B6281 /* DetailsVievVontroler.swift in Sources */,

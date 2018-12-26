@@ -20,9 +20,7 @@ class HomeViewController: UIViewController, Storyboarder {
     @IBOutlet weak var venuesLbl: UILabel!
     @IBOutlet weak var releadBtn: UIButton!
     weak var coordinator: MainCoordinator?
-    let clientId = "SKFVFAJQOCZ4SBO4UWWTAW21JB2YE2FVH0BCZRPYFILW2HV1"
-    let clientSecret = "0C5B3OPU4DFMOBA2ZTO3LPKGBIM00ZY5ZYVOAJHRGPZQOJWG"
-    let tartuBusStationloc = CLLocationCoordinate2D(latitude: 58.3780, longitude: 26.7321)
+    
     
     var locationManager = CLLocationManager()
     let regionRadius: CLLocationDistance = 5000
@@ -45,7 +43,7 @@ class HomeViewController: UIViewController, Storyboarder {
         locationManager.delegate = self
         verifyLocationStatus()
         updateUi()
-        self.drawOverlay(location: tartuBusStationloc, radius: 1000)
+        self.drawOverlay(location: Constants.tartuBusStationloc, radius: 1000)
     }
     
     private func updateUi() {
