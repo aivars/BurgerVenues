@@ -1,35 +1,45 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
+ update_fastlane(nightly: true)
 
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
+ default_platform(:ios)
 
-default_platform(:ios)
+ platform :ios do
+  
+ desc "Certs"
+  lane :certificates do
+    #match(type: "appstore")
+    match(type: "development")
+  end
 
-platform :ios do
-  before_all do
+  desc "CI build"
+  lane :ci_build do
+    certificates
+
+  # Test
+    # scan(
+  #    workspace: "Venues.xcworkspace",
+  #    devices: ["iPhone X"],
+  #    scheme: "Venues",
+  #    clean: true
+  #   )
+  end
+
+  desc "Circle CI lane"
+  lane :circleci do
     setup_circle_ci
+    ci_build
   end
-
-  desc "Generate new localized screenshots"
+  
+#desc "Generate new localized screenshots"
   lane :screenshots do
-    capture_screenshots(workspace: "Venues.xcworkspace", scheme: "Venues")
+    capture_screenshots(workspace: "Venues.xcworkspace", scheme: "VenuesUITests")
   end
-  lane :beta do
-  build_app(scheme: "Venues")
-  sync_code_signing(type: "appstore")    # see code signing guide for more information
-  build_app(scheme: "Venues")
-  upload_to_testflight
-  slack(message: "Successfully distributed a new beta build")
-  end
+  
+# lane :beta do
+#   build_app(scheme: "Venues")
+#   sync_code_signing(type: "development")    # see code signing guide for more information
+#   build_app(scheme: "Venues")
+#   upload_to_testflight
+#   slack(message: "Successfully distributed a new beta build")
+#   end
 
 end

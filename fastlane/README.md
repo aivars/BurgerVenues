@@ -16,14 +16,24 @@ or alternatively using `brew cask install fastlane`
 
 # Available Actions
 ## iOS
+### ios certificates
+```
+fastlane ios certificates
+```
+Certs
+### ios ci_build
+```
+fastlane ios ci_build
+```
+CI build
+### ios circleci
+```
+fastlane ios circleci
+```
+Circle CI lane
 ### ios screenshots
 ```
 fastlane ios screenshots
-```
-Generate new localized screenshots
-### ios beta
-```
-fastlane ios beta
 ```
 
 

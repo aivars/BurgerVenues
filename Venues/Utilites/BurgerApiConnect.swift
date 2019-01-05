@@ -21,7 +21,7 @@ struct BurgerApiConnect {
     
     func verifyUrls (imageUrls: [String], completionHandler: @escaping (String) -> ()) {
         
-        guard let apiUrl = URL(string:  Constants.burgerApiUrl) else {
+        guard let apiUrl = URL(string:  Constants.Urls.burgerApiUrl) else {
             completionHandler ("error")
             return
         }

@@ -43,7 +43,7 @@ class HomeViewController: UIViewController, Storyboarder {
         locationManager.delegate = self
         verifyLocationStatus()
         updateUi()
-        self.drawOverlay(location: Constants.tartuBusStationloc, radius: 1000)
+        self.drawOverlay(location: Constants.Locations.tartuBusStationloc, radius: 1000)
     }
     
     private func updateUi() {
