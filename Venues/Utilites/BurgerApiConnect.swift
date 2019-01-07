@@ -13,24 +13,25 @@ struct Urls: Codable {
     let urls: [String]
 }
 
-struct Result: Codable {
+struct BurgerResult: Codable {
     let urlWithBurger: String?
     let error: String?
 }
+
+enum Result<Value, Error: Swift.Error> {
+    case success(Value)
+    case failure(Error)
+}
+
+typealias Handler = (Result<String, NSError>) -> Void
+
 struct BurgerApiConnect {
     
     func verifyUrls (imageUrls: [String], completionHandler: @escaping (String) -> ()) {
-        
-        guard let apiUrl = URL(string:  Constants.Urls.burgerApiUrl) else {
-            completionHandler ("error")
-            return
-        }
-        
+        guard let apiUrl = URL(string:  Constants.Urls.burgerApiUrl) else {return}
         let urls = Urls(urls: imageUrls)
-
         var request = URLRequest(url: apiUrl)
         request.httpMethod = "POST"
-        
         do {
             let jsonData = try JSONEncoder().encode(urls)
             request.httpBody = jsonData
@@ -38,7 +39,6 @@ struct BurgerApiConnect {
             let session = URLSession.shared
             session.dataTask(with: request) { data, _, error in
                 if let error = error {
-//                    print(error.localizedDescription)
                     os_log("error: %s", log: Log.general, type: .error, error as CVarArg)
                     return
                 }
@@ -48,7 +48,7 @@ struct BurgerApiConnect {
                 }
                 
                 do {
-                    let result = try JSONDecoder().decode(Result.self, from: data)
+                    let result = try JSONDecoder().decode(BurgerResult.self, from: data)
                         guard let burgerUrl = result.urlWithBurger else {
                             completionHandler("error")
                             return

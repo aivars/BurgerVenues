@@ -15,12 +15,12 @@
     certificates
 
   # Test
-    # scan(
-  #    workspace: "Venues.xcworkspace",
-  #    devices: ["iPhone X"],
-  #    scheme: "Venues",
-  #    clean: true
-  #   )
+    scan(
+     workspace: "Venues.xcworkspace",
+     devices: ["iPhone X"],
+     scheme: "Venues",
+     clean: true
+    )
   end
 
   desc "Circle CI lane"
